@@ -35,10 +35,10 @@ public class JpaMain {
             //수정
             member.setAge(2);
 
-
-            //한 건 조회(캐시에서 조회를 해서 가져옴)
+            //한 건 조회
+            //(캐시에서 조회를 해서 가져옴)
             Member findMember = em.find(Member.class,id);
-            System.out.println("findMember=" + findMember.getUserName() + " age=" + findMember.getAge());
+            System.out.println("findMember= " + findMember.getUserName() + " age= " + findMember.getAge());
 
             //목록 조회
             List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
