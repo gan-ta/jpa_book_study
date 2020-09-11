@@ -1,0 +1,26 @@
+Entity 적용 시 주의사항
+1, 기본 생성자는 필수(파라미터가 필요업는 public 또는 protected생성자)
+2, final클래스, enum, interface, inner 클래스에는 사용할 수 없다.
+3, 저장할 필드에 final을 쓰면 안된다.
+
+@Table(name = "MEMBER", uniqueConstraints = {@UniqueConstraint(
+        name = "NAME_AGE_UNIQUE"
+        columnNames = {"NAME", "AGE"}
+)})
+이 조건은 name과 age컬럼 2개의 값이 유일해야 한다는 조건이다.
+
+@Column(name = "NAME", unique = true)
+@Column(name = "AGE", unique = true)
+만약, 이런식으로 하나씩 unique 조건을 걸어주면 각자 컬럼의 값이 유일해야 함으로 다른 표현이다.
+
+자동 키 생성은 데이터베이스마다 다르다
+SEQUENCE, IDENTITY, TABLE(키 생성 테이블)
+
+IDENTITY전략
+=>MySQL, postgreSQL, SQL Server, DB2
+
+SEQUENCE전략
+=>오라클, PostgreSQL, DB2, H2
+
+
+

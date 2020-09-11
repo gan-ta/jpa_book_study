@@ -1,6 +1,6 @@
-package global;
+package Example.member.test;
 
-import entity.Member;
+import Example.member.entity.Member;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
