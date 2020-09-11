@@ -1,9 +1,18 @@
 package entity;
 
+
+
+
+
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "MEMBER")
+@Getter
+@Setter
 public class Member {
 
     @Id
@@ -12,7 +21,6 @@ public class Member {
 
     @Column(name = "NAME")
     private String userName; //이름
-
 
     private Integer age; //나이
 }
