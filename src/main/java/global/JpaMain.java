@@ -12,7 +12,7 @@ public class JpaMain {
 
     public static void main(String[] args){
 
-        //엔티티 메니저 펙토리 생성
+        //엔티티 메니저 펙토리
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-book");
 
         EntityManager em = emf.createEntityManager();

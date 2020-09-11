@@ -6,8 +6,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import javax.xml.transform.sax.SAXSource;
-import java.util.List;
 
 public class ExamMergeMain {
     //엔티티 메니저 펙토리 생성
@@ -43,8 +41,6 @@ public class ExamMergeMain {
         System.out.println("em1 contains mergeMember = " + em1.contains(mergeMember));
 
         member = mergeMember;
-
-
 
         em1.close();//영속성 컨텍스트1 종료
                     //member 엔티티는 준여옥 상태가 된다
