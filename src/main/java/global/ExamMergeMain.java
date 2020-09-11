@@ -44,6 +44,8 @@ public class ExamMergeMain {
 
         member = mergeMember;
 
+
+
         em1.close();//영속성 컨텍스트1 종료
                     //member 엔티티는 준여옥 상태가 된다
 
