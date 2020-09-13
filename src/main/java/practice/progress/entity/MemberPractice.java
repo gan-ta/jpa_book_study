@@ -2,6 +2,7 @@ package practice.progress.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import practice.progress.global.BaseEntity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-public class MemberPractice {
+public class MemberPractice  extends BaseEntity {
     @Id
     @GeneratedValue
     private Long id;
