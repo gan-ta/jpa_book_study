@@ -31,5 +31,7 @@ public class ExamIdentity {
             em.close();
         }
 
+        emf.close();
+
     }
 }

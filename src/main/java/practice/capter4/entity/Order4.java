@@ -1,4 +1,4 @@
-package practice.entity;
+package practice.capter4.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,17 +10,17 @@ import java.util.Date;
 @Getter
 @Setter
 @SequenceGenerator(
-        name = "ORDER_PRACTICE_GENERATOR",
-        sequenceName = "ORDER_PRACTICE",
+        name = "ORDER_PRACTICE4_GENERATOR",
+        sequenceName = "ORDER_PRACTICE4",
         initialValue = 1,
         allocationSize = 50
 )
-@Table(name = "tbl_order")
-public class Order {
+@Table(name = "tbl_order4")
+public class Order4 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator = "ORDER_PRACTICE_GENERATOR")
+            generator = "ORDER_PRACTICE4_GENERATOR")
     @Column(name = "ORDER_ID")
     private Long id;
 
@@ -33,7 +33,7 @@ public class Order {
 
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus status;
+    private OrderStatus4 status;
 
 
 }

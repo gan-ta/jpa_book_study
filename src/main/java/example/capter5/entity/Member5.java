@@ -7,8 +7,9 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED) //엔티티는 기본 생성자 필수
+@Table(name = "tbl_capter5_member")
 @Entity
-public class Member {
+public class Member5 {
 
     @Id
     @Column(name = "MEMBER_ID")
@@ -18,9 +19,17 @@ public class Member {
 
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
-    private Team team;
+    private Team5 team;
 
-    public Member(String id, String username){
+    public void setTeam(Team5 team){
+        if(this.team != null){
+            this.team.getMembers().remove(this);
+        }
+        this.team = team;
+        team.getMembers().add(this);
+    }
+
+    public Member5(String id, String username){
         this.id = id;
         this.username = username;
     }
