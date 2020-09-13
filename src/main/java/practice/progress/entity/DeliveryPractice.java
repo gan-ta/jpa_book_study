@@ -2,6 +2,7 @@ package practice.progress.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import practice.progress.global.AddressPractice;
 
 import javax.persistence.*;
 
@@ -18,11 +19,14 @@ public class DeliveryPractice {
     @JoinColumn(name = "ORDER_ID")
     private OrderPractice order;
 
-    private String city;
+//    private String city;
+//
+//    private String street;
+//
+//    private String zipcode;
 
-    private String street;
-
-    private String zipcode;
+    @Embedded
+    private AddressPractice address;
 
     @Enumerated(EnumType.STRING)
     private DeliveryStatus deliveryStatus;

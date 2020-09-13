@@ -2,6 +2,7 @@ package practice.progress.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import practice.progress.global.AddressPractice;
 import practice.progress.global.BaseEntity;
 
 import javax.persistence.*;
@@ -18,11 +19,14 @@ public class MemberPractice  extends BaseEntity {
 
     private String name;
 
-    private String city;
+//    private String city;
+//
+//    private String street;
+//
+//    private String zipcode;
 
-    private String street;
-
-    private String zipcode;
+    @Embedded
+    private AddressPractice address;
 
     @OneToMany(mappedBy = "member")
     private List<OrderPractice> orders = new ArrayList<OrderPractice>();
