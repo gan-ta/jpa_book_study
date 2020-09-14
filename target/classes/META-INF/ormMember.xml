@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" version = "2.1">
+
+    <named-query name = "member10.findByUsername">
+        <query>
+            <![CDATA[
+                select m
+                from member10 m
+                where m.username = :username
+            ]]>
+        </query>
+    </named-query>
+
+    <named-query name = "member10.count">
+        <query>
+            select count(m) from member10 m
+        </query>
+
+    </named-query>
+
+</entity-mappings>
