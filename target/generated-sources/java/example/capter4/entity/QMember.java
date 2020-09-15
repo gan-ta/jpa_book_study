@@ -7,6 +7,7 @@ import com.mysema.query.types.path.*;
 import com.mysema.query.types.PathMetadata;
 import javax.annotation.Generated;
 import com.mysema.query.types.Path;
+import example.capter10.entity.QMember10;
 
 
 /**
@@ -17,7 +18,7 @@ public class QMember extends EntityPathBase<Member> {
 
     private static final long serialVersionUID = 2019854968L;
 
-    public static final QMember member = new QMember("member1");
+//    public static final QMember10 member = new QMember10("member10");
 
     public final NumberPath<Integer> age = createNumber("age", Integer.class);
 
